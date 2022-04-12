@@ -1,0 +1,22 @@
+docker images - listing images
+docker search [image ID] - search
+docker pull [image ID] - download image
+docker ps - running containers
+docker ps -a - all containers (running or not)
+docker run -it - run interactively
+docker run -p 1234:8080 [image] - redirect port [target port local:port in docker image]
+docker run -d - run as a demon
+
+#remove
+  1. docker rm - remove container
+  2. docker rmi - remove image
+
+#create image
+ docker build -t name:tag .
+ docker tag name:tag name1:tag1 - copy and change tag
+ 
+#run bash in docker
+  docker exec -it [id container] /bin/bash
+  
+#change image and commit this
+  docker commit [id container] name:tag 
